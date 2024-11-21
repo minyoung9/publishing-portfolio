@@ -1,0 +1,60 @@
+*{
+    box-sizing: border-box;
+    outline: none;
+}
+body{
+    font-size: 15px;
+    line-height: 1.6em;
+    background-color: #fff;
+    color: #000;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+/* reset css */
+h1,h2,h3,h4,h5,h6{
+    margin-top: 0;
+}
+
+/* common css */
+.headline-share{
+    text-align: center;
+}
+.headline-share h1{
+    font-size: 56px;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 50px;
+    margin-bottom: 70px;
+}
+.headline-share h1::before{
+    content: '';
+    position: absolute;
+    height: 5px;
+    width: 80px;
+    background: linear-gradient(to right, rgb(243, 15, 15), rgb(238, 105, 105));
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* section */
+section.portfolio{
+    height: 100vh;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background: url(../img/background-img.png);
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+.items{
+    width: 1280px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+}
+.item{
+    border: 1px solid black;
+}
