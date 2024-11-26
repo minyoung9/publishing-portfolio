@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+    <section class="login">
+        <img src="img/logo.png" alt="CodingWorks Logo">
+        <h1>BMW Login</h1>
+        <form action="">
+        <div class="input-field">
+            <input type="email" id="userid" autocomplete="off" required><span>이메일</span>
+        </div>
+        <div class="input-field">
+            <input type="password" id="userpw" required maxlength="12" minlength="8"><span>비밀번호</span>
+        </div>
+        <div class="button-field">
+            <input type="submit" value="Sign In" id="login-btn">
+        </div>
+        <div class="add-info">
+            <label>
+            <input type="checkbox" id="save-email"><em></em><span>이메일 상태 유지</span>
+            </label>
+            <a href="#none">회원가입</a>
+        </div>
+        </form>
+    </section>
+
+<script>
+    var userId = $('#userid'),
+        userPw = $('#userpw'),
+        loginBtn = $('#login-btn');
+
+    loginBtn.click(function(){
+        if(userId.val() == '') {
+        userId.next('span').addClass('warning');
+        setTimeout(function(){
+            userId.next('span').removeClass('warning')
+        }, 1500);
+        }
+        else if(userPw.val() == '') {
+            userPw.next('span').addClass('warning');
+            setTimeout(function(){
+            userPw.next('span').removeClass('warning')
+        }, 1500);
+    }
+    })  
+</script>
+</body>
+</html>

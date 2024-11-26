@@ -1,0 +1,119 @@
+/* @@@@@@@@@@@@@ 노트북 버전 @@@@@@@@@@@@@@@@ */
+@media screen and (max-width:1440px){
+    .header_inner{width: 100%;}
+    .logo img{margin-left: 44px;}
+    .menu{margin-left: 300px;}
+    .report{width: 100%; padding-top: 130px;}
+    .txtbox{width: 100%; padding: 60px 0 0 95px;}
+    .img_inner img{width: 90%;}
+    .banner{margin-top: 9px; background: linear-gradient(to right,#e0dede, #a3a4a5);}
+    .highlight{width: 100%;}
+    .highlight-inner{padding: 84px 0px 0px 0px;}
+}
+@media screen and (max-width:1200px){
+    .header{position: fixed; height: 100vh; width: 378px; transition: 0.5s; left: -378px;}
+    .header.active{left: 0px;}
+    .header_inner{width: 100%;}
+    .logo{float: right; margin-right: 20px;}
+    .menu{float: none;margin: 0; padding-top: 100px}
+    .menu a{display: block; padding: 6px 0px 0px 8px; font-size: 19px;}
+    .menu_icon_list{float: none; margin-right: 0; padding-left: 40px;}
+    .report{width: 100%; padding-top: 5px;}
+    .report > div{float: none; width: 100%; text-align: center;}
+    .txtbox{width: 100%; padding: 0px 10px 15px 10px;}
+    .img_inner img{float: none; margin: 0 auto;}
+    .banner-inner{width: 100%;}
+    .tab-btn label{width: 29%;}
+    .highlight-inner{padding: 40px 0px 0px 0px;}
+    .interior{padding-top: 20px;}    
+
+/* trigger */
+.trigger{
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    left: 21px;
+    top: 20px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 42px;
+    z-index: 1000;
+    color: rgb(133, 127, 127);
+}
+.trigger::before{
+    content: '\f00d';
+    font-family: fontawesome;
+}
+.trigger.active::before{
+    content: '\f0c9';
+    font-family: fontawesome;
+}
+}
+/* @@@@@@@@@@@@@@@@@@@@@ 테블릿 버전 @@@@@@@@@@@@@@@@@@@@@ */
+@media screen and (max-width:768px){
+body{font-size: 16px; padding: 0px 15px 0 15px;}
+.video{display: none;}
+.image-container{display: block;}
+/* 비디오 대체 이미지 영역 */
+.image-container img{
+    width: 100%;
+    display: block;
+    height: 80vh;
+    object-fit: cover;
+}
+.report{width: 100%; padding-top: 40px;}
+.report > div{float: none; width: 100%; text-align: center;}
+.txtbox{width: 100%; padding: 0;}
+.img_inner{padding-top: 27px;}
+.img_inner img{width: 100%; padding: 0;}
+.banner-inner{width: 100%;}
+.banner-content > div{float: none; width: 100%;}
+.tab-btn{text-align: center;}
+.tab-btn label{width: 30%;}
+.tab-btn label em{width: 130px; height: 130px; padding-top: 52px; font-size: 24px;}
+.tab {padding: 40px;}
+.tabs{text-align: center;}
+.tab h2{font-size: 34px;}
+.tab p{font-size: 21px;}
+.highlight{width: 100%; padding-top: 60px;}
+.highlight-inner{padding: 0;}
+.highlight-inner h1{font-size: 38px;}
+.highlight-content{width: 100%; padding: 60px 90px 90px 90px;}
+.highlight-content h2{font-size: 30px; padding: 0px 0 30px 0;}
+.highlight-content ul{padding: 0; font-size: 18px;}
+.highlight-content li{padding: 17px;}
+.interior{padding-top: 46px; padding-bottom: 25px;}
+.interior-content > div{float: none; width: 100%; height: 340px;}
+.interior-item-headline{width: 85%;}
+.interior-item-desc{padding: 25px 0;}
+.interior-item-photo img{width: 100%; height: auto;}
+footer{padding: 40px 15px;}
+.footer-inner{width: 100%;}
+.footer-content{width: 90%;}
+}
+/* @@@@@@@@@@@@@@@@@@@@@ 모바일 버전 @@@@@@@@@@@@@@@@@@@@@ */
+@media screen and (max-width:425px){
+.header{width: 230px;left: -230px;}
+.logo{margin-right: 7px;}
+.menu a{padding: 6px 0px 0px 15px;margin-left: 0;font-size: 16px;}
+.menu_icon_list{float: none;margin-right: 0;padding-left: 10px;}
+.trigger{font-size: 34px;}
+.image-container img{height: 50vh;}
+.tab-btn label{width: 31%;}
+.tab-btn label em{width: 110px;height: 110px;padding-top: 43px;font-size: 20px;}
+.tab h2{font-size: 29px;}
+.tab p{font-size: 18px;}
+.highlight-inner h1{font-size: 30px;}
+.highlight-content{width: 100%;padding: 33px 30px;}
+.highlight-content h2{font-size: 23px;}
+.highlight-content ul{font-size: 15px;}
+.interior-content > div{height: auto;}
+}
+@media screen and (max-width:375px){
+    .txtbox p{word-break: normal;}
+    .tab-btn label{width: 30%;}
+    .tab-btn label em{width: 90px;height: 90px;padding-top: 36px;font-size: 17px;}
+    .highlight-content ul{font-size: 18px;}
+    .interior-item-desc h3{font-size: 24px;}
+    .interior-item-desc p{font-size: 15px;}
+}
