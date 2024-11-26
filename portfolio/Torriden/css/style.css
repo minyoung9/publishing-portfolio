@@ -1,0 +1,232 @@
+/* Web Fonts - google web */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+/* fontawesome - cdn*/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css');
+/* xeicon - cdn */
+@import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+html, body {
+    height: 100%;
+    margin: 0;
+}
+body{
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+/* 헤더 로고 영역 */
+.logo{
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    z-index: 900;
+}
+.logo h1{
+    color: #000;
+}
+/* 메뉴 바 영역*/
+.trigger{
+    position: fixed;
+    top: 35px;
+    left: 35px;
+    cursor: pointer;
+    z-index: 900;
+}
+.trigger i{
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    font-weight: 900;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+}
+.trigger.active i{
+    background-color: #fff;
+    color: #000;
+    transform: rotate(315deg);
+}
+/* overlay */
+.overlay{
+    position: fixed;
+    background-color:#000;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    top: 35px;
+    left: 35px;
+    z-index: 333;
+    transition: 0.5s;
+    opacity: 0;
+}
+.overlay.active{
+    transform: scale(130);
+    opacity: 1;
+}
+/* 풀 스크린 메뉴 영역 */
+.menu{
+    position: fixed;
+    z-index: 444;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: 0.5s;
+    visibility: hidden;
+}
+.menu.active{
+    opacity: 1;
+    visibility: visible;
+}
+.menu a{
+    color: #fff;
+    font-family: "Playfair Display", serif;
+    font-size: 3.5em;
+    line-height: 1.6em;
+    position: relative;
+    padding-right: 18px;
+}
+.menu a::after{
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 0;
+    background-color: rgba(255, 255, 0, 0.822);
+    left: 0;
+    bottom: -2px;
+    z-index: -1;
+    transition: 0.5s;
+}
+.menu a:hover::after{
+    width: 100%;
+}
+/* welcome 슬라이드 영역 */
+.slideshow{
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+    z-index: -1;
+}
+.slideshow *{
+    outline: none;
+}
+.slideshow .slick-arrow{
+    display: none !important;
+}
+.welcome-heading {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-40%);
+    left: 7%;
+    text-align: center;
+    width: 750px;
+    font-size: 24px;
+}
+.welcome-heading h1{
+    font-weight: 600;
+    line-height: 1.2em;
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+.welcome-heading h1 em{
+    display: block;
+    font-style: normal;
+    color: #eb4d4b;
+}
+.welcome-heading p{
+    font-size: 20px;
+}
+/* 카테고리 영역 */
+.category-inner{
+    justify-content: center;
+    display: flex;
+    gap: 40px;
+    padding: 120px 0;
+}
+.square{
+    width: 500px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+.shape {
+    width: inherit;
+    height: inherit;
+    position: relative;
+}
+.shape img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover; 
+}
+.caption h2{
+    font-size: 2em;
+    padding-bottom: 13px;
+}
+.caption {
+    position: absolute; 
+    width: 100%; 
+    height: 100%; 
+    color: white;
+    text-align: center;
+    background: linear-gradient(to top, #000000, transparent);
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    transition: 0.5s;
+    bottom: 0; 
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.square:hover .caption {
+    opacity: 1; 
+    transform: translateY(0);
+}
+/* 푸터 영역 */
+footer{
+    background-color: #000000dc;
+    padding: 60px 0;
+    font-size: 14px;
+}
+.footer-inner{
+    width: 1600px;
+    margin: 0 auto;
+}
+.footer-content{
+    overflow: hidden;
+    color: #fff;
+}
+.footer-content > div{
+    float: left;
+}
+.footer-logo{
+    width: 50%;
+    text-align: center;
+    font-size: 23px;
+    padding: 60px 0;
+}
+.footer-logo-inner h2{
+    padding-bottom: 12px;
+}
+.sns a{
+    margin: 5px;
+    color: #fff;
+}
+.footer-address{
+    width: 50%; 
+}
+.address > span > p{
+    float: left;
+    width: 50%;
+    padding: 10px 0;
+}
+.address > span > p > span{
+    display: block;
+}

@@ -1,0 +1,471 @@
+/* xeicon cdn */
+@import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+/* Web Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Varela+Round&display=swap" rel="stylesheet');
+body{
+    font-family: "Varela Round", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: black; 
+    color: #fff;
+}
+#mobile-menu{
+    display: none;
+}
+/*header */
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #000;
+    z-index: 20;
+    overflow: hidden;
+}
+header.active{
+    box-shadow: 0 3px 5px rgb(59, 59, 59);
+}
+header #logo a img{
+    position: absolute;
+    width: 80px;
+    height: 56px;
+    top: 7px;
+    left: 3%;
+}
+/* 메뉴 */
+#menu{
+    position: absolute;
+    left: 30%;
+    width: 80%;
+    height: 100%;
+}
+#menu ul{
+    width: 15.555%;
+    height: 100%;
+    float: left;
+}
+#menu>ul>li{
+    width: 100%;
+    height: 70px;
+}
+#menu>ul>li>a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 70px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+}
+/* 서브 메뉴 그룹 */
+#menu>ul>li>ul{
+    padding-top: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    position: relative;
+    opacity: 0;
+}
+#menu>ul>li>ul>li>a{
+    display: block;
+    width: 100%;
+    height:55px;
+    line-height: 55px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+#menu>ul>li>ul>li:last-child{
+    padding-bottom: 10px;
+    box-sizing: border-box;
+}
+#menu>ul>li>ul>li>a:hover{
+    text-decoration: underline;
+    font-weight: 700;
+}
+#menu_bg{
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    height: 350px;
+    background-color:#282828;
+    z-index: -1;
+}
+/* 슬라이드 영역 */
+.slide{
+    padding-top: 70px;
+    position: relative;
+}
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+.slide button {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 71px;
+    height: 71px;
+    border-radius: 50%;
+    border: none;
+    background-color: #000;
+    cursor: pointer;
+}
+.slide button::before{
+    font-family: 'xeicon';
+    color: #fff;
+    font-size: 37px;
+}
+.slide button.slick-prev{
+    left: 30px;
+    font-size: 0;
+    color: transparent;
+}
+.slide button.slick-prev::before{
+    content: '\e906';
+    font-family: 'xeicon';
+}
+.slide button.slick-next{
+    right: 30px;
+    font-size: 0;
+    color: transparent;
+}
+.slide button.slick-next::before{
+    content: '\e907';
+    font-family: 'xeicon';
+}
+/* 로스터 영역 */
+.roster{
+    padding-top: 98px;
+}
+.roster-heading{
+    width: 100%;
+    font-size: 66px;
+    text-align: center;
+    font-weight: normal;
+    white-space: nowrap;
+    padding: 18px;
+    background-color: red;
+}
+.roster-inner{
+    padding-top: 58px;
+    width: 1350px;
+    margin: 0 auto;
+}
+/* 티원 주전 멤버 */
+.member{
+    display: inline-block;
+    width: 250px;
+    margin: 4px; 
+    position: relative;
+}
+.member:hover:before{
+    background-color: red;
+}
+.member::before{
+    content: 'Top';
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    background-color: gray;
+    z-index: 10;
+    border-radius: 0 0 10px 0;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 45px;
+    color: white;
+}
+.member:nth-of-type(2):before{
+    content: 'Jug';
+}
+.member:nth-of-type(3):before{
+    content: 'Mid';
+}
+.member:nth-of-type(4):before{
+    content: 'Ad';
+}
+.member:nth-of-type(5):before{
+    content: 'Spt';
+}
+.photo{
+    position: relative;
+    height: 430px;
+}
+.photo img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: 0.5s;
+}
+.photo a img:first-child{
+    z-index: 1;
+}
+.photo:hover a img:first-child{
+    opacity: 0;
+}
+.name{
+    text-align: center;
+    font-size: 27px;
+    padding-top: 17px;
+    font-weight: 900;
+}
+/* T1 월즈 우승 경력 */
+.worlds-winner-t1-year{
+    display: none;
+}
+.worlds-t1{
+    text-align: center;
+    padding-top: 98px;
+}
+.worlds-t1 > h1{
+    background-color: red;
+    font-size: 66px;
+    padding: 18px;
+    margin-bottom: 70px;
+}
+.worlds-t1 > h1 span{
+    color: rgb(255, 255, 0);
+}
+.winner-inner{
+    width: 1350px;
+    margin: 0 auto;
+}
+.year-tab-btn{
+    display: flex;
+}
+.year-tab-btn label{
+    border: 1px solid white;
+    flex: 1;
+    padding: 10px 15px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.year-tab-content{
+    display: none;
+}
+.year-tab-content > h1{
+    font-size: 37px;
+    padding: 50px 0;
+}
+.year-tab-content > h1 > span{
+    color: rgb(0, 26, 255);
+}
+.year-tab-content > h1 > span:nth-child(2) {
+    color: red;  
+}
+/* checked function */
+input[name=year-tab]{
+    display: none;
+}
+input[id=year-tab1]:checked ~ .year-tabs .year-tab1,
+input[id=year-tab2]:checked ~ .year-tabs .year-tab2,
+input[id=year-tab3]:checked ~ .year-tabs .year-tab3,
+input[id=year-tab4]:checked ~ .year-tabs .year-tab4,
+input[id=year-tab5]:checked ~ .year-tabs .year-tab5{
+    display: block;
+}
+input[id=year-tab1]:checked ~ .year-tab-btn label[for=year-tab1],
+input[id=year-tab2]:checked ~ .year-tab-btn label[for=year-tab2],
+input[id=year-tab3]:checked ~ .year-tab-btn label[for=year-tab3],
+input[id=year-tab4]:checked ~ .year-tab-btn label[for=year-tab4],
+input[id=year-tab5]:checked ~ .year-tab-btn label[for=year-tab5] {
+    background-color: #fff;
+    color: black;
+}
+/* T1 flip-card */
+.flip-t1card{
+    width: 1350px;
+    margin: 0 auto;
+    aspect-ratio: 4/2;
+    perspective: 1000px;
+}
+.flip-t1card:hover .t1card-inner{
+    transform: rotateX(180deg);
+}
+.t1card-inner{
+    width: inherit;
+    height: 100%;
+    position: relative;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+}
+.t1card-inner > div{
+    width: inherit;
+    height: 100%;
+    position: absolute;
+}
+.t1card-inner .front img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.t1card-inner .back{
+    background-color: #eee;
+    transform: rotateX(180deg);
+    backface-visibility: hidden;
+}
+.t1card-inner .back .thum img{
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+}
+.player{
+    margin-top: 33px;
+    color: black;
+}
+.t1card-inner .back .player span{
+    padding: 13px;
+    font-size: 20px;
+    font-weight: 700;
+}
+/* T1 소개 */
+.faq{
+    border-top: 1px solid #fff;
+    margin-top: 98px;
+}
+.faq-inner{
+    padding-top: 36px;
+    color: gainsboro;
+    width: 1100px;
+    margin: 0 auto;
+    line-height: 1.6em;
+}
+.faq-inner h1{
+    text-align: center;
+    font-weight: 600;
+    font-size: 2em;
+    margin-bottom: 50px;
+}
+.faq-title{
+    background-color: #303030;
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom: 3px;
+    position: relative;
+}
+.faq-title:before{
+    content: '\e9c5';
+    font-family: xeicon;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    font-style: normal;
+    font-size: 20px;
+    right: 15px;
+    top: 10px;
+    transition: 0.5s;
+}
+.faq-title.active:before{
+    transform: rotate(45deg);
+}
+.faq-title:hover,
+.faq-title.active{
+    background-color: #ffffff4f;
+    color: #fff;
+}
+.faq-content{
+    background-color: #303030;
+    padding: 24px;
+    margin-bottom: 5px;
+    display: none;
+}
+.faq-content span{
+    display: block;
+    padding: 7px;
+}
+/* 푸터 */
+footer{
+    margin-top: 98px;
+    background-color: red;
+}
+.footer-inner{
+    width: 1350px;
+    margin: 0 auto;
+    padding: 52px;
+}
+.footer-content{
+    overflow: hidden;
+}
+.footer-content > div{
+    float: left;
+}
+.footer-t1{
+    width: 15%;
+    font-size: 38px;
+}
+.copyright{
+    width: 85%;
+    overflow: hidden;
+}
+.company-sns{
+    overflow: hidden;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 20px;
+}
+.company{
+    float: left;
+}
+.company span:last-child{
+    display: block;
+}
+.company span{
+    padding: 7px 0 0 10px;
+}
+.sns{
+    float: right;
+    font-size: 30px;
+    padding-right: 43px;
+}
+.sns a{
+    color: #eee;
+    padding: 0 10px;
+}
+.sns a:hover{
+    color: black;
+}
+.sns a:nth-of-type(1)::before{
+    content: "\ec1f";
+    font-family: xeicon;
+}
+.sns a:nth-of-type(2)::before{
+    content: "\ebd5";
+    font-family: xeicon;
+}
+.sns a:nth-of-type(3)::before{
+    content: "\ec32";
+    font-family: xeicon;
+}
+.sns a:nth-of-type(4)::before{
+    content: "\ebe9";
+    font-family: xeicon;
+}
+.information{
+    padding-top: 20px;
+}
+.information span{
+    display: block;
+    padding: 7px 0 0 10px;
+}
+/* go to top */
+.btn-top{
+    position: fixed;
+    right: 60px;
+    bottom: -90px;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #ebe7e7;
+    line-height: 43px;
+    text-align: center;
+    font-size: 27px;
+    transition: 0.5s;
+}
+.btn-top.active{
+    bottom: 60px;
+}
